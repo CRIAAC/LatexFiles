@@ -1,0 +1,100 @@
+\documentclass{beamer}
+ 
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\setbeamertemplate{bibliography item}{}
+
+\usepackage[absolute,showboxes,overlay]{textpos}     % declaration du package
+\textblockorigin{0pt}{0pt}                           %origine des positions (coin gauche) attention, axe y vers le bas !!
+%\TPshowboxestrue                                  % affiche le contour des textblock
+%\TPshowboxesfalse                                % n'affiche pas le contour des textblock
+
+\usetheme{Warsaw}
+\definecolor{violet}{RGB}{70,109,18}  % vert fonce
+\setbeamercolor{structure}{fg=violet}
+%\graphicspath{ {} } % Path to images
+ 
+\title{Title}
+\author{Author 1, Author 2} % Leave blank
+\institute{Universit\'e du Qu\'ebec \`A Chicoutimi} % Leave blank
+\date{} % Leave blank
+\begin{document}
+\setbeamertemplate{footline}
+{
+\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\today\hspace*{2ex} 
+\end{beamercolorbox}
+}
+\begin{frame}
+\titlepage
+\end{frame}
+
+\setbeamertemplate{footline}
+{
+\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}Summary\hspace*{2ex} 
+\end{beamercolorbox}
+}
+
+\section*{Summary}
+\begin{frame}
+  \tableofcontents[hideallsubsections]
+\end{frame}
+\setbeamertemplate{footline}
+{
+\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertframenumber ~/ \inserttotalframenumber\hspace*{2ex} 
+\end{beamercolorbox}
+}
+\addtocounter{framenumber}{-1}
+\setcounter{framenumber}{0}
+
+\section{Section 1}
+\begin{frame}
+\begin{center}
+\underline{Introduction}\\
+\end{center}
+\begin{itemize}
+\item Lorem ipsum.
+	\begin{itemize}
+	\item Lorem ipsum.
+	\item Lorem ipsum.
+	\end{itemize}
+\item Lorem ipsum \cite{RN1}.
+\end{itemize}
+\end{frame}
+
+\section{Section 2}
+\begin{frame}
+\begin{center}
+\underline{Method}\\
+\end{center}
+\begin{itemize}
+\item Lorem ipsum.
+	\begin{itemize}
+	\item Lorem ipsum.
+	\item Lorem ipsum.
+	\end{itemize}
+\item Lorem ipsum \cite{RN1}.
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.5\textwidth]{img1}
+\end{center}
+\end{frame}
+
+\subsection*{}
+\begin{frame}
+\begin{center}
+Thanks.
+\end{center}
+\end{frame}
+
+\section*{References}
+\begin{frame}[allowframebreaks]
+\frametitle{References}
+\bibliography{./references}
+\bibliographystyle{apalike}
+\end{frame}
+\end{document}
